@@ -1,0 +1,45 @@
+{% extends 'start_app/start_app.base.html' %}
+{% load static %}
+{% block title %}
+    {{ userData.fullname }} | Dash
+{% endblock %}
+
+{% block navContent %}
+
+    <div class="dropdown" style="padding-left : 900px;">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ userData.fullname }}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="margin-left : 900px;width:100px;">
+     <a class="dropdown-item" href="{% url 'Logout' %}">Log out</a>
+    </div>
+    </div>
+
+{% endblock %}
+{% block bodyContent %}
+<p class="h2" style="align:center;padding-left : 200px;">
+        List of Funders that may want to invest in <b>{{ name }}</b>.
+    </p>
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Product score is: {{ score }}
+    </button>
+
+<div class="container" style="margin-top : 40px;">
+
+        <div class="row">
+        {% for funder in funders %}
+            <div class="card" style="width: 18rem;margin : 10px;">
+            <div class="card-body">
+            <h5 class="card-title">{{ funder.ventureName }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ funder.productType }}</h6>
+            <p class="card-text"> Email address : {{ funder.emailAddress }} <br/> phone no : {{ funder.phoneNumber }} <br/> Maximum Funding : {{ funder.maximum_funding_capacity }} Millions INR </p>
+            {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+            {% comment %} <a href="#" class="card-link">Another link</a> {% endcomment %}
+                <p class="card-text">minimum_score_required:{ funder.minimum_accepted_score} </p>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

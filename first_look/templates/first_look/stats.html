@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<footer id="footer" class="footer-section ">
+        <div class="container ">
+            <div class="footer-cta pt-5 pb-5 ">
+                <div class="row ">
+                    <div class="col-xl-4 col-md-4 mb-30 ">
+                        <div class="single-cta ">
+                            <i class="fa fa-map-marker "></i>
+                            <div class="cta-text ">
+                                <h4>Find us</h4>
+                                <span>CCET, Sector-26, Chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30 ">
+                        <div class="single-cta ">
+                            <i class="fa fa-phone "></i>
+                            <div class="cta-text ">
+                                <h4>Call us</h4>
+                                <span>+918146548281</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30 ">
+                        <div class="single-cta ">
+                            <i class="fa fa-envelope-open "></i>
+                            <div class="cta-text ">
+                                <h4>Mail us</h4>
+                                <span>team_namespace@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5 ">
+                <div class="row ">
+                    <div class="col-xl-4 col-lg-4 mb-50 ">
+                        <div class="footer-widget ">
+                            <div class="footer-logo ">
+                                <a href="index.html "><img src="{% static 'images/logowhite.png' %}" class="img-fluid " alt="logo "></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 ">
+                        <div class="footer-widget ">
+                            <div class="footer-widget-heading ">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#about">Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+                        <div class="footer-widget ">
+                            <div class="footer-widget-heading ">
+                                <h3>Want Updates?</h3>
+                            </div>
+                            <div class="footer-text mb-25 ">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form ">
+                                <form action="# ">
+                                    <input type="text " placeholder="Email Address ">
+                                    <button><i class="fa fa-telegram "></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-12 col-lg-12 text-center">
+                        <div class="copyright-text ">
+                            <p>Copyright &copy; 2020, All Right Reserved <a href="# ">Team Namespace</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

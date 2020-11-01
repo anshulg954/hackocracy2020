@@ -1,0 +1,37 @@
+{% extends 'start_app/start_app.base.html' %}
+{% load static %}
+{% block title %}
+    {{ userData.fullname }} | OTP
+{% endblock %}
+
+{% block navContent %}
+    <div class="dropdown" style="padding-left : 900px;">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ userData.fullname }}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="margin-left : 900px;width:100px;">
+     <a class="dropdown-item" href="{% url 'Logout' %}">Log out</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block bodyContent %}
+    <div class="container" style="padding-top : 200px;width : 500px;padding-left : 100px;"> 
+        {% if wrongotp %}
+        <div class="alert alert-secondary" role="alert">
+                we have Entered Wrong OTP.
+        </div>
+        {% endif %}
+        <form autcomplete="off" method="POST" action="{% url 'Companytop' %}"> 
+            {% csrf_token %}
+            <caption> 
+                Verify Email address 
+            </caption> 
+            <input type="text" class="form-control" id="inputEmail4" name = "otp" required>
+            <div style="padding-left : 100px;">
+            <button type="submit" class="btn btn-primary">Confirm</button>
+            </div> 
+        </form> 
+    </div> 
+
+{% endblock %}

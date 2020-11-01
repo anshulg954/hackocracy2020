@@ -1,0 +1,36 @@
+{% extends 'start_app/start_app.base.html' %}
+{% load static %}
+{% block title %}
+    Signup | Role
+{% endblock %}
+
+{% block navContent %}
+    <div style="color : white;padding-left : 900px;"> 
+        <span> 
+            Sign up 
+        </span> 
+    </div> 
+{% endblock %}
+
+{% block bodyContent %}
+    <div class="container"> 
+        <div class="row"> 
+
+            <div class="col" style="padding-top:200px;padding-left : 380px;"> 
+            <h2 style="margin:10px;padding-left : 40px;"> 
+             Please Select the role.
+            </h2> 
+                <a href="{% url 'signupFunder' %}" style="text-decoration:None;"> 
+                    <button class="btn" style="background-color:#2f3b69;color:white;width : 200px;"> 
+                        Funder
+                    </button> 
+                </a> 
+                <a href="{% url 'companySingup' %}" style="text-decoration:None;"> 
+                    <button class="btn" style="background-color:#2f3b69;color:white;width:200px;"> 
+                        Startup
+                    </button>
+                </a> 
+            </div> 
+        </div> 
+    </div> 
+{% endblock %} 

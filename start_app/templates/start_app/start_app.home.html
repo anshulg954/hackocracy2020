@@ -1,0 +1,112 @@
+{% extends 'start_app/start_app.base.html' %} {% load static %}
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+{% block title %} StartUP | INDIA {% endblock %} {% block navContent %}
+<div style="padding-left : 1000px;">
+    <a href="{% url 'signupRole' %}" style="color : white;">Sign up</a> <span style="color:white;">/</span><a href="{% url 'signinRole' %}" style="color : white;">Login</a>
+</div>
+{% endblock %} {% block bodyContent %}
+<header id="header2">
+    <section class="header-content">
+        <div class="col-12 col-sm-6 inner-img" style="margin: 12% 0 0 5%;">
+            <br>
+            <h1 class="header-title animate-pop-in">Welcome to <span style="background-image: linear-gradient(#f4bb41 20%,#f4bc03 25%,   #f47a41  85%, #FF9933 90%); ">StartUp| India</span>,</h1>
+            <br />
+            <h1 class="header-subtitle animate-pop-in">A platform to map the ventures and the startups together for a <span style="background-image: linear-gradient(#f4bb41 20%,#f4bc03 25%,   #f47a41  85%, #FF9933 90%); ">Self Reliant India!!!</span></h1>
+
+            <button class="btn btn-success"><a href="{% url 'signupRole' %}" style="color: aliceblue;">Get Started</a></button>
+        </div>
+    </section>
+</header>
+
+<footer id="footer" class="footer-section ">
+    <div class="container ">
+        <div class="footer-cta pt-5 pb-5 ">
+            <div class="row ">
+                <div class="col-xl-4 col-md-4 mb-30 ">
+                    <div class="single-cta ">
+                        <i class="fa fa-map-marker "></i>
+                        <div class="cta-text ">
+                            <h4>Find us</h4>
+                            <span>CCET, Sector-26, Chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30 ">
+                    <div class="single-cta ">
+                        <i class="fa fa-phone "></i>
+                        <div class="cta-text ">
+                            <h4>Call us</h4>
+                            <span>+918146548281</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30 ">
+                    <div class="single-cta ">
+                        <i class="fa fa-envelope-open "></i>
+                        <div class="cta-text ">
+                            <h4>Mail us</h4>
+                            <span>team_namespace@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5 ">
+            <div class="row ">
+                <div class="col-xl-4 col-lg-4 mb-50 ">
+                    <div class="footer-widget ">
+                        <div class="footer-logo ">
+                            <a href="index.html "><img src="{% static 'images/logowhite.png' %}" class="img-fluid " alt="logo "></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30 ">
+                    <div class="footer-widget ">
+                        <div class="footer-widget-heading ">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+                    <div class="footer-widget ">
+                        <div class="footer-widget-heading ">
+                            <h3>Want Updates?</h3>
+                        </div>
+                        <div class="footer-text mb-25 ">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form ">
+                            <form action="# ">
+                                <input type="text " placeholder="Email Address ">
+                                <button><i class="fa fa-telegram "></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-xl-12 col-lg-12 text-center">
+                    <div class="copyright-text ">
+                        <p>Copyright &copy; 2020, All Right Reserved <a href="# ">Team Namespace</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

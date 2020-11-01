@@ -1,0 +1,67 @@
+{% extends 'start_app/start_app.base.html' %} {% block title %} Sigup | Company {% endblock %} {% block navContent %}
+<div style="padding-left : 900px;color:white;">
+    Company Signup
+</div>
+{% endblock %} {% block bodyContent %}
+<div class="container">
+    {% comment %} form start {% endcomment %}
+    <div style="width : 700px;margin-left : 300px;">
+        {% if emailAlreadyRegistered %}
+        <div class="alert alert-secondary" role="alert">
+            {{ emailTarget }} is already registerd.
+        </div>
+        {% endif %}
+        <p class="h1" style="padding-left : 120px;">Company Signup</p>
+        <form method="post" style="padding-top : 80px;" autocomplete="off" action="{% url 'companySingup' %}">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="userEmail" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Password </label>
+                    <input type="password" class="form-control" id="inputEmail4" name="userPassword" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Maximum Funding required</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="maxFunding" required>Millions in &#x20B9;
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Tel. Number</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="userTelnumber" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">full Name</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="fullName" required>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputState">Domain of Company</label>
+                    <select id="inputState" class="form-control" name="userDomain" required>
+        <option selected>Android</option>
+        <option>Aritifical intelligence</option>
+        <option>Electronics</option>
+      </select>
+                </div>
+
+
+
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+
+        {% comment %} form end {% endcomment %}
+    </div>
+</div>
+{% endblock %}
